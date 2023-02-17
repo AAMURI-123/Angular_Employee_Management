@@ -1,0 +1,140 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <form
+            [formGroup]="theFormGroup"
+            (ngSubmit)="onSubmit()"
+            class="main-form"
+          >
+            <h1>Update Employee's Info</h1>
+            <div formGroupName="employee" class="employee-form">
+              <!-- <div class="row">
+                <div class="col-md-3 labels">First Name :</div>
+                <div class="col-md-9">
+                  <input formControlName="firstName" type="text" class="inpt" />
+                  <div *ngIf=" firstName.invalid && (firstName.dirty || firstName.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="(firstName.errors['required']) || (firstName.errors['onlyWhiteSpaceValidation'])" class="errors">
+                      First Name is required
+                    </div>
+                    <div *ngIf=" (firstName.value !== ' ')&&(firstName.errors['minlength'])" class="errors">
+                        Character must be at least 2 characters long
+                      </div>
+                  </div>
+                </div>
+              </div> -->
+    
+              <!-- <div class="row">
+                <div class="col-md-3 labels">Last Name :</div>
+                <div class="col-md-9">
+                  <input formControlName="lastName" type="text"  class="inpt" />
+                  <div *ngIf=" lastName.invalid && (lastName.dirty || lastName.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="lastName.errors['required']|| (lastName.errors['onlyWhiteSpaceValidation'])" class="errors">
+                      Last Name is required
+                    </div>
+                    <div *ngIf=" (lastName.value !== ' ')&& lastName.errors['minlength']" class="errors">
+                        Character must be at least 2 characters long
+                      </div>
+                  </div>
+                </div>
+              </div> -->
+    
+              <div class="row">
+                <div class="col-md-3 labels">Departments :</div>
+                <div class="col-md-9">
+                  <select class="inpt" formControlName="department">
+                    <option selected="true">{{employee.departmentName}}</option>
+                    <option *ngFor="let department of departments">{{department.name }}
+                    </option>
+                  </select>
+                  <div *ngIf=" department.invalid && (department.dirty || department.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="department.errors['required']" class="errors">
+                      Department is required
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-3 labels">Experience Years :</div>
+                <div class="col-md-9">
+                  <input
+                    formControlName="experianceYears"type="number"  class="inpt"/>
+                    <div *ngIf=" experianceYears.invalid && (experianceYears.dirty || experianceYears.touched)"class="inpt" style="background-color: #e48888" >
+                        <div *ngIf="experianceYears.errors['required'] " class="errors">
+                         Experience Year is required
+                        </div>
+                        
+                      </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-3 labels">Salary :</div>
+                <div class="col-md-9">
+                  <input formControlName="salary" type="number" class="inpt" />
+                  <div *ngIf=" salary.invalid && (salary.dirty || salary.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="salary.errors['required'] " class="errors">
+                      Salary is required
+                    </div>
+                    <div *ngIf="salary.errors['minlength']" class="errors">
+                        Character must be at least 4 characters long
+                      </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-3 labels">Email :</div>
+                <div class="col-md-9">
+                  <input formControlName="email" type="text" class="inpt" />
+                  <div *ngIf=" email.invalid && (email.dirty || email.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="email.errors['required'] || (email.errors['onlyWhiteSpaceValidation'])" class="errors">
+                      Email is required
+                    </div>
+                    <div *ngIf="email.errors['pattern']" class="errors">
+                        Email must valid email address
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-3 labels">Phone No :</div>
+                <div class="col-md-9">
+                  <input formControlName="phoneNo" type="number" class="inpt" />
+                  <div *ngIf=" phoneNo.invalid && (phoneNo.dirty || phoneNo.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="phoneNo.errors['required'] || (phoneNo.errors['onlyWhiteSpaceValidation'])" class="errors">
+                      Phone No is required
+                    </div>
+                    <div *ngIf="phoneNo.errors['pattern']" class="errors">
+                        Phone No must be 10 digits
+                      </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-3 labels">Image URL :</div>
+                <div class="col-md-9">
+                  <input formControlName="imageUrl" type="text" class="inpt" />
+                  <div *ngIf=" imageUrl.invalid && (imageUrl.dirty || imageUrl.touched)"class="inpt" style="background-color: #e48888" >
+                    <div *ngIf="imageUrl.errors['required'] || (imageUrl.errors['onlyWhiteSpaceValidation'])" class="errors">
+                      Image URL is required
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <button type="submit" class="submit-btn" style="float: right">
+                  Save
+                </button>
+                <div class="col-md-6"></div>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>

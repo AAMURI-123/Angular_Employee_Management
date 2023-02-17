@@ -1,0 +1,31 @@
+.search-input{
+    border: 10px;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: aquamarine;
+}
+
+.search-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(22, 16, 16);
+    margin-top: 3rem;
+ margin-left: -1.5rem;
+ margin-bottom: 10px;
+    color: #fff;
+}
+.addEmployee-btn{
+    margin-left: 82%;
+    border: 1px;
+    border-radius: 10px;
+    background-color: rgb(73, 103, 103);
+    padding: 7px;
+    font-size: 20px;
+    color: #fff;
+   
+}
+
+.addEmployee-btn:hover{
+  background-color: rgb(74, 125, 125);
+}

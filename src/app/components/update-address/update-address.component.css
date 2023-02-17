@@ -1,0 +1,55 @@
+
+.row{
+    margin-top: 10px;
+   }
+   .main-form{
+       
+       width: 50%;
+       height: 185vh;
+       margin-top: 3rem;
+      margin-left: 25%;
+   }
+   .employee-form{
+       border: 3px solid black;
+       padding-top: 1rem;
+       padding-left: 10px;
+       margin-top: 10px;
+       padding-bottom: 20px;
+   }
+   
+   .address-form{
+       border: 3px solid black;
+       padding-top: 1rem;
+       padding-left: 10px;
+       margin-top: 10px;
+       padding-bottom: 20px;
+       margin-bottom: 2rem;
+   }
+   .labels{
+       font-size: 22px;
+   
+   }
+   .inpt{
+       width:80%;
+       height: 3rem;
+       border: 1px solid gray;
+       border-radius: 10px;
+       padding-left: 10px;
+       font-size: 19px;
+   }
+   
+   .submit-btn{
+   
+       font-size: 20px;
+       border-radius: 10px;
+       text-align: center;
+       width: 5.5rem;
+       height: 3.7rem;
+       background-color: rgb(117, 191, 247);
+   }
+   
+   .errors{
+       padding: 5px;
+       color: black;
+       font-size: 18px;
+   }

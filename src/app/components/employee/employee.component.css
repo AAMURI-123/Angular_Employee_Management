@@ -1,0 +1,85 @@
+form{
+    height: 44rem;
+    width: 22rem;
+    border: 5px solid rgb(71, 64, 64);
+    border-radius: 10px;
+   margin-top: 5rem;
+    background-color: #fff;
+}
+
+.paging{
+
+    margin-top: 10px;
+    background-color: aqua;
+}
+.form-header{
+    height: 2.9rem;
+    margin: 0;
+    padding-left: 20px;
+    background-color: rgb(52, 56, 55);
+    font-size: 22px;
+    color: #fff;
+}
+
+.photos-img{
+    
+    height: 80px;
+    width: 120px;
+    margin-top: 2px;
+    float: right;
+}
+
+.form-control{
+    margin-top: 15px;
+    
+}
+
+.control-name{
+    font-weight: bold; 
+    margin-left: 7px;
+
+}
+.control-value{
+   font-size: 16px;
+    border: 2px solid rgb(59, 54, 54);
+    border-radius: 7px;
+    margin-left: -1rem;
+}
+
+.address-btn{
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(78, 99, 92);
+    padding: 1.2rem;
+    border-radius: 7px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    float: right;
+}
+
+.edit-btn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(78, 99, 92);
+    padding: 1rem;
+    border-radius: 7px;
+    margin-top: 15px;
+   margin-right: 8px;
+  
+    float:right;
+   
+}
+
+.delete-btn{
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(78, 99, 92);
+    padding: 1rem;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 7px;
+    float:left;
+}

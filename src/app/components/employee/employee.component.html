@@ -1,0 +1,86 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="row" >
+<div class="col-md-4" *ngFor="let employee of employees">
+    <form >
+        <div class="form-header"> {{employee.firstName | uppercase }}    {{ employee.lastName | uppercase}}</div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+            <img src="{{employee.imageUrl}}"  class="photos-img">
+        </div></div>
+        <div class="row form-control" >
+            <div class="col-md-3 control-name" > Id.No : </div>
+            <div class="col-md-6 control-value" style="margin-left: 10px;">{{employee.identificationNumber}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > Department : </div>
+            <div class="col-md-6 control-value" style="margin-left: -9%;">{{employee.departmentName}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > Exp.years : </div>
+            <div class="col-md-6 control-value" style="margin-left: -10%;">{{employee.experienceYears}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-4 control-name" > Salary : </div>
+            <div class="col-md-6 control-value">{{employee.salary | currency : "USD"}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-4 control-name" > Email : </div>
+            <div class="col-md-6 control-value">{{employee.email}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-4 control-name" > Phone : </div>
+            <div class="col-md-6 control-value">{{employee.phoneNo}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-4 control-name"  >  Started Date : </div>
+            <div class="col-md-6 control-value" style="padding-top: 5px; margin-left: 1px;">{{employee.startedDate | date : 'MM/dd/YYYY'}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-4 control-name" > Updated Date : </div>
+            <div class="col-md-6 control-value" style="padding-top: 5px;">{{employee.updatedDate  | date : 'MM/dd/YYYY'}}</div>
+        </div>
+      
+        <div class="row">
+            <div class="col-md-8">
+                <button routerLink="/address/{{employee.id}}" class="address-btn">Address</button>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0px;" >
+            
+            <div class="col-md-12" > 
+                <button class="edit-btn" (click)="edit(employee)"> Edit</button>
+                <button class="delete-btn" (click)="deleteEmployee(employee.id, employee.firstName, employee.lastName)"> Delete</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<div class="footer-pagination">
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6 ">
+        <ngb-pagination  [(page)]="thePageNumber"
+        [pageSize]="thePageSize"
+      [collectionSize]="theTotalElements"
+     (pageChange)="getEmployees()"></ngb-pagination>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>

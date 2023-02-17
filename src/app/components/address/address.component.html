@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="row" >
+<div class="col-md-6">
+    <form >
+        <div class="form-header">{{employee.firstName | uppercase}} {{employee.lastName | uppercase}} </div>
+        <!-- <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+            <img src="{{employee.imageUrl}}"  class="photos-img">
+        </div></div> -->
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > Street : </div>
+            <div class="col-md-6 control-value" style="margin-left: -12%;">{{address.street}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > City :  </div>
+            <div class="col-md-6 control-value" style="margin-left: -13%;">{{address.city}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > State: </div>
+            <div class="col-md-6 control-value" style="margin-left: -13%;">{{address.state}}</div>
+        </div>
+
+        <div class="row form-control" >
+            <div class="col-md-5 control-name" > Zip Code : </div>
+            <div class="col-md-6 control-value" style="margin-left: -10%;">{{address.zipCode}}</div>
+        </div>
+
+        
+      
+        <!-- <div class="row">
+            <div class="col-md-8">
+                <button routerLink="address/{{employee.id}}" class="address-btn">Address</button>
+            </div>
+        </div> -->
+        <div class="row" style="margin-bottom: 0px;" >
+            
+            <div class="col-md-12" > 
+                <button class="edit-btn" (click)="editAddress(address)"> Edit</button>
+                <button routerLink="/employee" class="delete-btn"> Back</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
